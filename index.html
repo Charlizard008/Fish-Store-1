@@ -1,103 +1,561 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Blue Ocean Fish Store</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Link external CSS -->
-  <link rel="stylesheet" href="style.css">
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Blue Ocean Fish Store</title>
+
+    <!-- FONT AWESOME -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- GOOGLE FONT -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS FILE -->
+
+    <link rel="stylesheet"
+        href="style.css">
+
 </head>
+
 <body>
 
-<header>
-  <h1>🐠 Blue Ocean Fish Store</h1>
-  <p>Premium Aquarium Fish for Enthusiasts</p>
-</header>
+    <!-- NAVBAR -->
 
-<nav>
-  <div class="nav-left">
-    <a href="#shop">Shop</a>
-    <a href="#about">About Us</a>
-    <a href="#contact">Contact Us</a>
-  </div>
-  <div class="nav-right">
-    <button onclick="document.getElementById('cart').classList.add('open')">🛒 View Cart</button>
-    <button onclick="toggleMode()">🌙 Toggle Mode</button>
-  </div>
-</nav>
+    <header>
 
-<section class="hero">
-  <h1>Welcome to Blue Ocean</h1>
-  <p>Discover rare and beautiful aquarium fish for your collection</p>
-</section>
+        <div class="logo">
+            🐠 Blue Ocean
+        </div>
 
-<!-- Shop Section -->
-<section id="shop" class="products">
-  <div class="product-card">
-    <img src="https://via.placeholder.com/250x150?text=Asian+Arowana" alt="Asian Arowana">
-    <h3>Asian Arowana</h3>
-    <p>RM 500</p>
-    <button onclick="addToCart('Asian Arowana', 500)">Add to Cart</button>
-  </div>
-  <div class="product-card">
-    <img src="https://via.placeholder.com/250x150?text=Fighting+Fish" alt="Fighting Fish">
-    <h3>Fighting Fish</h3>
-    <p>RM 20</p>
-    <button onclick="addToCart('Fighting Fish', 20)">Add to Cart</button>
-  </div>
-  <div class="product-card">
-    <img src="https://via.placeholder.com/250x150?text=Flower+Horn" alt="Flower Horn">
-    <h3>Flower Horn</h3>
-    <p>RM 150</p>
-    <button onclick="addToCart('Flower Horn', 150)">Add to Cart</button>
-  </div>
-  <div class="product-card">
-    <img src="https://via.placeholder.com/250x150?text=Guppy" alt="Guppy">
-    <h3>Guppy</h3>
-    <p>RM 5</p>
-    <button onclick="addToCart('Guppy', 5)">Add to Cart</button>
-  </div>
-  <div class="product-card">
-    <img src="https://via.placeholder.com/250x150?text=Tropical+Fish" alt="Tropical Fish">
-    <h3>Tropical Fish</h3>
-    <p>RM 30</p>
-    <button onclick="addToCart('Tropical Fish', 30)">Add to Cart</button>
-  </div>
-</section>
+        <nav>
 
-<!-- About Us Section -->
-<section id="about">
-  <h2>About Us</h2>
-  <p>Blue Ocean Fish Store was founded by passionate aquarists who believe in bringing the beauty of exotic fish to homes across Malaysia. We specialize in rare species like Asian Arowana and Flower Horn, ensuring every fish is healthy and vibrant. Our mission is to inspire aquarium lovers and provide the best care tips for your aquatic friends.</p>
-</section>
+            <a href="#shop">Shop</a>
 
-<!-- Contact Us Section -->
-<section id="contact">
-  <h2>Contact Us</h2>
-  <p>📍 Location: Pinang, Malaysia<br>
-     📞 Phone: +60 123-456-789<br>
-     📧 Email: info@blueoceanfish.com<br><br>
-     Have questions? Reach out to us anytime — we’re happy to help you build your dream aquarium.</p>
-</section>
+            <a href="#about">About</a>
 
-<!-- Footer -->
-<footer>
-  <p>&copy; 2026 Blue Ocean Fish Store. All rights reserved.</p>
-</footer>
+            <a href="#contact">Contact</a>
 
-<!-- Cart Sidebar -->
-<div id="cart">
-  <h2>Your Cart</h2>
-  <div id="cart-items"></div>
-  <div class="cart-footer">
-    <strong>Total: RM <span id="cart-total">0</span></strong>
-    <br><br>
-    <button onclick="checkout()">Checkout</button>
-    <button onclick="closeCart()">Close</button>
-  </div>
-</div>
+            <button class="nav-btn"
+                onclick="openCart()">
 
-<!-- Link external JavaScript -->
-<script src="script.js"></script>
+                🛒 Cart
+
+            </button>
+
+            <button class="nav-btn"
+                onclick="toggleMode()">
+
+                🌙 Mode
+
+            </button>
+
+            <button class="nav-btn"
+                onclick="openLogin()">
+
+                Admin
+
+            </button>
+
+        </nav>
+
+    </header>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <!-- FLOATING BUBBLES -->
+
+        <div class="bubble"
+            style="left:10%; width:40px; height:40px; animation-duration:12s;">
+        </div>
+
+        <div class="bubble"
+            style="left:30%; width:70px; height:70px; animation-duration:18s;">
+        </div>
+
+        <div class="bubble"
+            style="left:55%; width:30px; height:30px; animation-duration:10s;">
+        </div>
+
+        <div class="bubble"
+            style="left:80%; width:60px; height:60px; animation-duration:15s;">
+        </div>
+
+        <div class="hero-content">
+
+            <h1>
+                Blue Ocean Fish Store
+            </h1>
+
+            <p>
+                Rare • Exotic • Premium Aquarium Fish
+            </p>
+
+            <button
+                onclick="document.getElementById('shop').scrollIntoView()">
+
+                Explore Fish
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- FEATURES -->
+
+    <section class="features">
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-fish"></i>
+
+            <h3>
+                Rare Species
+            </h3>
+
+            <p>
+                Discover imported and rare aquarium fish.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-truck-fast"></i>
+
+            <h3>
+                Fast Delivery
+            </h3>
+
+            <p>
+                Safe and secure fish delivery nationwide.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-shield-heart"></i>
+
+            <h3>
+                Healthy Fish
+            </h3>
+
+            <p>
+                Professionally cared and quarantined fish.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- PRODUCTS -->
+
+    <section id="shop"
+        class="products-section">
+
+        <h2 class="section-title">
+
+            Featured Fish
+
+        </h2>
+
+        <!-- SEARCH -->
+
+        <div class="search-bar">
+
+            <input type="text"
+                placeholder="Search fish..."
+                id="searchInput">
+
+        </div>
+
+        <div class="products">
+
+            <!-- PRODUCT 1 -->
+
+            <div class="product-card">
+
+                <img src="https://images.unsplash.com/photo-1524704654690-b56c05c78a00?q=80&w=1200&auto=format&fit=crop">
+
+                <div class="product-info">
+
+                    <h3>
+                        Asian Arowana
+                    </h3>
+
+                    <div class="rating">
+
+                        ★★★★★
+
+                    </div>
+
+                    <p class="price">
+
+                        RM 500
+
+                    </p>
+
+                    <div class="product-buttons">
+
+                        <button class="cart-btn"
+                            onclick="addToCart('Asian Arowana',500)">
+
+                            Add to Cart
+
+                        </button>
+
+                        <button class="wishlist-btn"
+                            onclick="wishlist()">
+
+                            ❤
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- PRODUCT 2 -->
+
+            <div class="product-card">
+
+                <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=1200&auto=format&fit=crop">
+
+                <div class="product-info">
+
+                    <h3>
+                        Flower Horn
+                    </h3>
+
+                    <div class="rating">
+
+                        ★★★★★
+
+                    </div>
+
+                    <p class="price">
+
+                        RM 150
+
+                    </p>
+
+                    <div class="product-buttons">
+
+                        <button class="cart-btn"
+                            onclick="addToCart('Flower Horn',150)">
+
+                            Add to Cart
+
+                        </button>
+
+                        <button class="wishlist-btn"
+                            onclick="wishlist()">
+
+                            ❤
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- PRODUCT 3 -->
+
+            <div class="product-card">
+
+                <img src="https://images.unsplash.com/photo-1517451330947-7809dead78d5?q=80&w=1200&auto=format&fit=crop">
+
+                <div class="product-info">
+
+                    <h3>
+                        Betta Fish
+                    </h3>
+
+                    <div class="rating">
+
+                        ★★★★☆
+
+                    </div>
+
+                    <p class="price">
+
+                        RM 25
+
+                    </p>
+
+                    <div class="product-buttons">
+
+                        <button class="cart-btn"
+                            onclick="addToCart('Betta Fish',25)">
+
+                            Add to Cart
+
+                        </button>
+
+                        <button class="wishlist-btn"
+                            onclick="wishlist()">
+
+                            ❤
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ABOUT -->
+
+    <section id="about"
+        class="about">
+
+        <div class="about-container">
+
+            <div class="about-text">
+
+                <h2>
+                    About Blue Ocean
+                </h2>
+
+                <p>
+                    Blue Ocean Fish Store was founded
+                    by passionate aquarists who believe
+                    in bringing the beauty of aquatic
+                    life into every home.
+                </p>
+
+                <p>
+                    We specialize in premium and exotic
+                    fish species while ensuring health,
+                    quality and proper care.
+                </p>
+
+            </div>
+
+            <div class="about-image">
+
+                <img src="https://images.unsplash.com/photo-1535591273668-578e31182c4f?q=80&w=1200&auto=format&fit=crop">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT -->
+
+    <section id="contact"
+        class="contact">
+
+        <h2>
+
+            Contact Us
+
+        </h2>
+
+        <div class="contact-container">
+
+            <div class="contact-card">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                <h3>
+                    Location
+                </h3>
+
+                <p>
+                    Penang, Malaysia
+                </p>
+
+            </div>
+
+            <div class="contact-card">
+
+                <i class="fa-solid fa-phone"></i>
+
+                <h3>
+                    Phone
+                </h3>
+
+                <p>
+                    +60 123-456-789
+                </p>
+
+            </div>
+
+            <div class="contact-card">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                <h3>
+                    Email
+                </h3>
+
+                <p>
+                    info@blueoceanfish.com
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- NEWSLETTER -->
+
+    <section class="newsletter">
+
+        <h2>
+
+            Join Our Aquarium Community
+
+        </h2>
+
+        <p>
+
+            Get fish care tips and new arrivals.
+
+        </p>
+
+        <input type="email"
+            placeholder="Enter your email">
+
+        <button onclick="subscribe()">
+
+            Subscribe
+
+        </button>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+
+            © 2026 Blue Ocean Fish Store.
+            All Rights Reserved.
+
+        </p>
+
+    </footer>
+
+    <!-- CART -->
+
+    <div id="cart">
+
+        <h2>
+            Your Cart
+        </h2>
+
+        <br>
+
+        <div id="cart-items"></div>
+
+        <div class="cart-footer">
+
+            <strong>
+
+                Total: RM
+                <span id="cart-total">0</span>
+
+            </strong>
+
+            <button onclick="checkout()">
+
+                Checkout
+
+            </button>
+
+            <button onclick="closeCart()">
+
+                Close Cart
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- ADMIN LOGIN MODAL -->
+
+    <div id="login-modal">
+
+        <div class="login-box">
+
+            <h2>
+
+                Admin Login
+
+            </h2>
+
+            <input type="text"
+                id="admin-username"
+                placeholder="Username">
+
+            <input type="password"
+                id="admin-password"
+                placeholder="Password">
+
+            <button onclick="adminLogin()">
+
+                Login
+
+            </button>
+
+            <button onclick="closeLogin()">
+
+                Close
+
+            </button>
+
+            <div id="admin-panel">
+
+                <h3>
+
+                    Admin Panel
+
+                </h3>
+
+                <p>
+
+                    Welcome Admin!
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- JAVASCRIPT FILE -->
+
+    <script src="script.js"></script>
+
 </body>
+
 </html>
