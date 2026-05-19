@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blue Ocean Fish Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Blue Ocean Fish Store</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <button class="mode-toggle" onclick="toggleMode()">🌗 Mode</button>
+      <button class="cart-toggle" onclick="toggleCart()">🛒 Cart</button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Welcome to Blue Ocean</h2>
+    <p>Discover premium fish for your aquarium.</p>
+    <a href="shop.html" class="btn">Shop Now</a>
+  </section>
+
+  <aside class="cart" id="cart">
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+    <div class="cart-total">Total: RM <span id="cart-total">0</span></div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>

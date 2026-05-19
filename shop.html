@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop - Blue Ocean Fish Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Blue Ocean Fish Store</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <button class="mode-toggle" onclick="toggleMode()">🌗 Mode</button>
+      <button class="cart-toggle" onclick="toggleCart()">🛒 Cart</button>
+    </nav>
+  </header>
+
+  <section class="products">
+    <div class="product">
+      <img src="https://via.placeholder.com/250x150?text=Asian+Arowana" alt="Asian Arowana">
+      <h2>Asian Arowana</h2>
+      <p>RM 500</p>
+      <button onclick="addToCart('Asian Arowana', 500)">Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/250x150?text=Fighting+Fish" alt="Fighting Fish">
+      <h2>Fighting Fish</h2>
+      <p>RM 50</p>
+      <button onclick="addToCart('Fighting Fish', 50)">Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/250x150?text=Flower+Horn" alt="Flower Horn">
+      <h2>Flower Horn</h2>
+      <p>RM 200</p>
+      <button onclick="addToCart('Flower Horn', 200)">Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/250x150?text=Guppy" alt="Guppy">
+      <h2>Guppy</h2>
+      <p>RM 20</p>
+      <button onclick="addToCart('Guppy', 20)">Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/250x150?text=Tropical+Fish" alt="Tropical Fish">
+      <h2>Tropical Fish</h2>
+      <p>RM 100</p>
+      <button onclick="addToCart('Tropical Fish', 100)">Add to Cart</button>
+    </div>
+  </section>
+
+  <aside class="cart" id="cart">
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+    <div class="cart-total">Total: RM <span id="cart-total">0</span></div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
